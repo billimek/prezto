@@ -11,9 +11,10 @@ pmodload 'editor'
 
 # If the command doesn't exist externally, we need to fall back to the bundled
 # submodule.
-if (( ! $+commands[fasd] )); then
-  source "${0:h}/external/fasd" || return 1
-fi
+# do not load this submodule for now
+# if (( ! $+commands[fasd] )); then
+#  source "${0:h}/external/fasd" || return 1
+# fi
 
 #
 # Initialization
