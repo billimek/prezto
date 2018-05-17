@@ -21,7 +21,9 @@ pmodload 'editor'
 #
 
 cache_file="${TMPDIR:-/tmp}/prezto-fasd-cache.$UID.zsh"
-if [[ "${commands[fasd]}" -nt "$cache_file" || ! -s "$cache_file"  ]]; then
+if [[ "${commands[fasd]}" -nt "$cache_file" \
+      || "${ZDOTDIR:-$HOME}/.zpreztorc" -nt "$cache_file" \
+      || ! -s "$cache_file"  ]]; then
   # Set the base init arguments.
   init_args=(zsh-hook)
 
