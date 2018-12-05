@@ -37,3 +37,6 @@
 	path = modules/prompt/external/powerlevel9k
 	url = https://github.com/bhilburn/powerlevel9k.git
   branch = master
+[submodule "contrib"]
+	path = contrib
+	url = https://github.com/belak/prezto-contrib
